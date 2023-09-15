@@ -13,7 +13,7 @@ interface ProductProps {
 }
 
 export const Product = ({ data }: { data: ProductProps }) => {
-	const { id, image, title, price, discount } = data;
+	const { id, image, title, price} = data;
 	// const [isFavouriteList, setIsFavouriteList] = useState(false);
 
 	// const cartState = useCartState();
@@ -37,7 +37,7 @@ export const Product = ({ data }: { data: ProductProps }) => {
 	// };
 
 	return (
-		<div className=" group relative mx-6 my-4 flex w-full flex-col border-[1px] border-solid border-zinc-50 bg-white shadow-md transition-shadow duration-500 hover:border-zinc-100 hover:shadow-xl md:px-8 md:py-8">
+		<div className="group relative mx-6 my-4 flex w-full flex-col border-[1px] border-solid border-zinc-50 bg-white shadow-md transition-shadow duration-500 hover:border-zinc-100 hover:shadow-xl md:px-8 md:py-8">
 			<div>
 				<div className="center relative flex aspect-square h-auto w-full">
 					<Image
@@ -49,9 +49,9 @@ export const Product = ({ data }: { data: ProductProps }) => {
 						crossOrigin="anonymous"
 					/>
 				</div>
-				{discount && <p className="bg-zinc-800 px-1 text-sm text-zinc-50">{discount}</p>}
+		
 				<div
-					className={`text-zinc-200" } absolute right-4 top-4
+					className={`text-zinc-200 absolute right-4 top-4
 					text-3xl`}
 				>
 					<svg
@@ -76,7 +76,7 @@ export const Product = ({ data }: { data: ProductProps }) => {
 					{title}
 				</h3>
 				<div className="flex justify-center">
-					<p className={`mt-1.5 text-center tracking-wide `}>{`${price} EUR`}</p>
+					<p className={`mt-1.5 text-center tracking-wide`}>{`${price} EUR`}</p>
 				</div>
 			</Link>
 			<div className="mx-auto">
